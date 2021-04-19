@@ -68,102 +68,31 @@ const MyAccount = () => {
       <div className="sm:flex sm:flex-row-reverse sm:items-center">
         <div className="sm:px-2">
           <h1 className="px-4 pt-5 text-2xl text-left text-teal-500 font-bold sm:text-3xl">
-            My Account
+            Мой аккаунт
           </h1>
           <p className="px-4 mt-8 text-xl text-gray-700 sm:mt-8">
-            Feel free to change any of your account information here. Only changes you make will apply
+          Не стесняйтесь изменять любую информацию о своей учетной записи здесь. Будут применяться только внесенные вами изменения
           </p>
           <form className="pt-6 pb-8 mb-4" onSubmit={handleSubmit(onSubmit)}>
 
             <div className="mb-4">
               <label htmlFor="user_metadata.full_name" className="block text-gray-700 text-sm font-bold mb-2">
-                Full Name
+                Полное имя
               </label>
               <input
                 ref={register({ required: true })}
                 className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
                 type="text"
                 disabled={formProcessing}
-                placeholder="Johnny Appleseed"
+                placeholder="Иванов Иван"
                 name="user_metadata.full_name">
               </input>
               {errors.user_metadata?.full_name && <p className="text-red-500 text-xs italic">Name is required</p>}
             </div>
 
-            <div className="mb-4">
-              <label htmlFor="user_metadata.phone_number" className="block text-gray-700 text-sm font-bold mb-2">
-                Phone Number
-              </label>
-              <input
-                ref={register({ pattern: /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/ })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-                type="text"
-                disabled={formProcessing}
-                placeholder="800-500-2323"
-                name="user_metadata.phone_number">
-              </input>
-              {errors.user_metadata?.phone_number && <p className="text-red-500 text-xs italic">Phone number not required, but must be formatted correctly: 123-123-1234</p>}
-            </div>
+            
 
-            <div className="mb-4">
-              <label htmlFor="user_metadata.address.street" className="block text-gray-700 text-sm font-bold mb-2">
-                Street
-              </label>
-              <input
-                ref={register({ required: true })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-                type="text"
-                disabled={formProcessing}
-                placeholder="123 Main St."
-                name="user_metadata.address.street">
-              </input>
-              {errors.user_metadata?.address.street && <p className="text-red-500 text-xs italic">Address Required</p>}
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="user_metadata.address.city" className="block text-gray-700 text-sm font-bold mb-2">
-                City
-              </label>
-              <input
-                ref={register({ required: true })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-                type="text"
-                disabled={formProcessing}
-                placeholder="Columbus"
-                name="user_metadata.address.city">
-              </input>
-              {errors.user_metadata?.address.city && <p className="text-red-500 text-xs italic">City Required</p>}
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="user_metadata.address.state" className="block text-gray-700 text-sm font-bold mb-2">
-                State
-              </label>
-              <input
-                ref={register({ required: true })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-                type="text"
-                disabled={formProcessing}
-                placeholder="OH"
-                name="user_metadata.address.state">
-              </input>
-              {errors.user_metadata?.address.state && <p className="text-red-500 text-xs italic">State Required</p>}
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="user_metadata.address.zip" className="block text-gray-700 text-sm font-bold mb-2">
-                Zip Code
-              </label>
-              <input
-                ref={register({ required: true })}
-                className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-                type="text"
-                disabled={formProcessing}
-                placeholder="43081"
-                name="user_metadata.address.zip">
-              </input>
-              {errors.user_metadata?.address.zip && <p className="text-red-500 text-xs italic">Zip code Required</p>}
-            </div>
+            
 
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
