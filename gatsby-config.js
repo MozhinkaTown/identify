@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-identity-gotrue',
       options: {
-        url: 'https://gatsby-identity-demo.jonsully.net'
+        url: 'https://mozhinka-identify.netlify.app'
       }
     },
     {
